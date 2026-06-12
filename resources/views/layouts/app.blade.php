@@ -591,7 +591,7 @@
                     'footer.terms': 'Syarat & Ketentuan',
                     'footer.help': 'Pusat Bantuan',
                     'language.label': 'Pilih bahasa',
-                    'footer.copyright': '© 2024 Mahreen Indonesia. Inovasi, kolaborasi, dan kebermanfaatan untuk bertumbuh bersama.'
+                    'footer.copyright': '© 2026 Mahreen Indonesia. Inovasi, kolaborasi, dan kebermanfaatan untuk bertumbuh bersama.'
                 },
                 en: {
                     page_title: 'Mahreen Indonesia | Creating for Indonesia',
@@ -663,7 +663,7 @@
                     'footer.terms': 'Terms & Conditions',
                     'footer.help': 'Help Center',
                     'language.label': 'Choose language',
-                    'footer.copyright': '© 2024 Mahreen Indonesia. Innovation, collaboration, and meaningful impact for shared growth.'
+                    'footer.copyright': '© 2026 Mahreen Indonesia. Innovation, collaboration, and meaningful impact for shared growth.'
                 }
             };
 

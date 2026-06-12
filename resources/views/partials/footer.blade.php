@@ -32,6 +32,6 @@
         </div>
     </div>
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-10 md:mt-stack-xl pt-stack-md border-t border-outline-variant/10 text-center">
-        <p class="text-on-surface-variant font-body-md text-body-md" data-i18n="footer.copyright">&copy; 2024 Mahreen Indonesia. Inovasi, kolaborasi, dan kebermanfaatan untuk bertumbuh bersama.</p>
+        <p class="text-on-surface-variant font-body-md text-body-md" data-i18n="footer.copyright">&copy; 2026 Mahreen Indonesia. Inovasi, kolaborasi, dan kebermanfaatan untuk bertumbuh bersama.</p>
     </div>
 </footer>
