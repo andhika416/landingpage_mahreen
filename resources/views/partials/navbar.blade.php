@@ -6,9 +6,6 @@
                     <img src="{{ asset('Mahreen.png') }}" alt="Logo Mahreen Indonesia" class="h-9 w-auto max-w-[150px] object-contain sm:h-10 sm:max-w-[180px] md:h-12 md:max-w-[220px]" />
                 </div>
                 <div class="flex shrink-0 items-center gap-2 md:hidden">
-                    <button class="bg-secondary-container text-on-secondary-container px-3 py-2 rounded-full font-label-lg text-label-lg font-bold hover:opacity-80 transition-opacity active:scale-95 duration-200" data-i18n="nav.join_short">
-                        Gabung
-                    </button>
                     <button class="theme-toggle inline-flex h-10 w-10 items-center justify-center bg-surface-container-high text-on-surface rounded-full border border-outline-variant/30 hover:bg-surface-variant/70 active:scale-95 duration-200" data-theme-toggle type="button">
                         <span class="material-symbols-outlined text-[20px]" data-theme-icon>light_mode</span>
                     </button>
@@ -44,12 +41,17 @@
                             </button>
                         </div>
                     </div>
+                    <div class="relative" data-mobile-menu-dropdown>
+                        <button class="theme-toggle inline-flex h-10 w-10 items-center justify-center bg-surface-container-high text-on-surface rounded-full border border-outline-variant/30 hover:bg-surface-variant/70 active:scale-95 duration-200" data-mobile-menu-trigger type="button" aria-haspopup="true" aria-expanded="false" aria-label="Buka menu navigasi" title="Buka menu navigasi">
+                            <span class="material-symbols-outlined text-[20px]">menu</span>
+                        </button>
+                        <div class="hidden absolute right-0 top-full mt-2 min-w-[190px] rounded-2xl border border-outline-variant/30 bg-surface-container-high shadow-2xl p-2 z-50" data-mobile-menu>
+                            <a class="nav-link mobile-menu-link flex min-h-[42px] items-center rounded-xl bg-primary/10 px-4 text-primary font-bold border border-primary/20 font-label-lg text-label-lg transition-colors" data-nav-link data-mobile-menu-link data-i18n="nav.home" href="#home">Beranda</a>
+                            <a class="nav-link mobile-menu-link mt-1 flex min-h-[42px] items-center rounded-xl bg-surface-container-high px-4 text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border border-transparent" data-nav-link data-mobile-menu-link data-i18n="nav.about" href="#about">Tentang</a>
+                            <a class="nav-link mobile-menu-link mt-1 flex min-h-[42px] items-center rounded-xl bg-surface-container-high px-4 text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border border-transparent" data-nav-link data-mobile-menu-link data-i18n="nav.contact" href="#kontak">Kontak</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="mobile-nav-scroll -mx-1 flex items-center gap-2 overflow-x-auto whitespace-nowrap px-1 pb-1 md:hidden">
-                <a class="nav-link inline-flex min-h-[40px] items-center rounded-full bg-primary/10 px-4 text-primary font-bold border border-primary/20 font-label-lg text-label-lg transition-colors" data-nav-link data-i18n="nav.home" href="#home">Beranda</a>
-                <a class="nav-link inline-flex min-h-[40px] items-center rounded-full bg-surface-container-high px-4 text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border border-transparent" data-nav-link data-i18n="nav.about" href="#about">Tentang</a>
-                <a class="nav-link inline-flex min-h-[40px] items-center rounded-full bg-surface-container-high px-4 text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border border-transparent" data-nav-link data-i18n="nav.contact" href="#kontak">Kontak</a>
             </div>
             <div class="hidden md:flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-6 lg:gap-8">
                 <a class="nav-link text-primary font-bold border-b-2 border-secondary pb-1 font-label-lg text-label-lg transition-colors" data-nav-link data-i18n="nav.home" href="#home">Beranda</a>

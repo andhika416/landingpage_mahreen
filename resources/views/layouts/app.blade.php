@@ -503,6 +503,9 @@
             const languageTriggers = Array.from(document.querySelectorAll('[data-language-trigger]'));
             const languageMenus = Array.from(document.querySelectorAll('[data-language-menu]'));
             const languageOptions = Array.from(document.querySelectorAll('[data-language-option]'));
+            const mobileMenuDropdown = document.querySelector('[data-mobile-menu-dropdown]');
+            const mobileMenuTrigger = document.querySelector('[data-mobile-menu-trigger]');
+            const mobileMenu = document.querySelector('[data-mobile-menu]');
             const navLinks = Array.from(document.querySelectorAll('[data-nav-link]'));
             const inPageLinks = Array.from(document.querySelectorAll('a[href^="#"]:not([href="#"])'));
             const sections = navLinks
@@ -519,6 +522,15 @@
                 languageTriggers.forEach((trigger) => {
                     trigger.setAttribute('aria-expanded', 'false');
                 });
+            };
+            const closeMobileMenu = () => {
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                }
+
+                if (mobileMenuTrigger) {
+                    mobileMenuTrigger.setAttribute('aria-expanded', 'false');
+                }
             };
             const translations = {
                 id: {
@@ -745,9 +757,26 @@
                     if (menu && willOpen) {
                         menu.classList.remove('hidden');
                         trigger.setAttribute('aria-expanded', 'true');
+                        closeMobileMenu();
                     }
                 });
             });
+
+            if (mobileMenuTrigger && mobileMenu) {
+                mobileMenuTrigger.addEventListener('click', (event) => {
+                    event.stopPropagation();
+
+                    const willOpen = mobileMenu.classList.contains('hidden');
+
+                    closeMobileMenu();
+                    closeLanguageMenus();
+
+                    if (willOpen) {
+                        mobileMenu.classList.remove('hidden');
+                        mobileMenuTrigger.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
 
             languageOptions.forEach((option) => {
                 option.addEventListener('click', () => {
@@ -758,15 +787,21 @@
 
             document.addEventListener('click', (event) => {
                 const clickedInsideDropdown = languageDropdowns.some((dropdown) => dropdown.contains(event.target));
+                const clickedInsideMobileMenu = mobileMenuDropdown?.contains(event.target);
 
                 if (!clickedInsideDropdown) {
                     closeLanguageMenus();
+                }
+
+                if (!clickedInsideMobileMenu) {
+                    closeMobileMenu();
                 }
             });
 
             document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape') {
                     closeLanguageMenus();
+                    closeMobileMenu();
                 }
             });
 
@@ -833,6 +868,12 @@
                     link.classList.toggle('border-secondary', isActive);
                     link.classList.toggle('text-on-surface-variant', !isActive);
                     link.classList.toggle('border-transparent', !isActive);
+
+                    if (link.hasAttribute('data-mobile-menu-link')) {
+                        link.classList.toggle('bg-primary/10', isActive);
+                        link.classList.toggle('border-primary/20', isActive);
+                        link.classList.toggle('bg-surface-container-high', !isActive);
+                    }
                 });
             };
 
@@ -874,6 +915,7 @@
                     if (targetId) {
                         setActiveLink(targetId);
                         scrollToSection(targetSection);
+                        closeMobileMenu();
                         window.history.replaceState(null, '', `#${targetId}`);
                     }
                 });
