@@ -1,12 +1,12 @@
 <nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-tertiary/10 shadow-sm">
-    <div class="px-margin-mobile md:px-margin-desktop py-3 md:py-4 max-w-container-max mx-auto w-full">
+    <div class="px-margin-mobile md:px-margin-desktop py-2.5 md:py-4 max-w-container-max mx-auto w-full">
         <div class="flex flex-col gap-3 md:flex-row md:items-center md:relative">
-            <div class="flex items-center justify-between gap-4">
+            <div class="flex items-start justify-between gap-3 sm:items-center">
                 <div class="flex items-center">
-                    <img src="{{ asset('Mahreen.png') }}" alt="Logo Mahreen Indonesia" class="h-10 w-auto max-w-[180px] object-contain md:h-12 md:max-w-[220px]" />
+                    <img src="{{ asset('Mahreen.png') }}" alt="Logo Mahreen Indonesia" class="h-9 w-auto max-w-[150px] object-contain sm:h-10 sm:max-w-[180px] md:h-12 md:max-w-[220px]" />
                 </div>
-                <div class="flex items-center gap-2 md:hidden">
-                    <button class="bg-secondary-container text-on-secondary-container px-3.5 py-2 rounded-full font-label-lg text-label-lg font-bold hover:opacity-80 transition-opacity active:scale-95 duration-200" data-i18n="nav.join_short">
+                <div class="flex shrink-0 items-center gap-2 md:hidden">
+                    <button class="bg-secondary-container text-on-secondary-container px-3 py-2 rounded-full font-label-lg text-label-lg font-bold hover:opacity-80 transition-opacity active:scale-95 duration-200" data-i18n="nav.join_short">
                         Gabung
                     </button>
                     <button class="theme-toggle inline-flex h-10 w-10 items-center justify-center bg-surface-container-high text-on-surface rounded-full border border-outline-variant/30 hover:bg-surface-variant/70 active:scale-95 duration-200" data-theme-toggle type="button">
@@ -46,10 +46,10 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center gap-5 overflow-x-auto whitespace-nowrap md:hidden">
-                <a class="nav-link text-primary font-bold border-b-2 border-secondary pb-1 font-label-lg text-label-lg transition-colors" data-nav-link data-i18n="nav.home" href="#home">Beranda</a>
-                <a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border-b-2 border-transparent pb-1" data-nav-link data-i18n="nav.about" href="#about">Tentang</a>
-                <a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border-b-2 border-transparent pb-1" data-nav-link data-i18n="nav.contact" href="#kontak">Kontak</a>
+            <div class="mobile-nav-scroll -mx-1 flex items-center gap-2 overflow-x-auto whitespace-nowrap px-1 pb-1 md:hidden">
+                <a class="nav-link inline-flex min-h-[40px] items-center rounded-full bg-primary/10 px-4 text-primary font-bold border border-primary/20 font-label-lg text-label-lg transition-colors" data-nav-link data-i18n="nav.home" href="#home">Beranda</a>
+                <a class="nav-link inline-flex min-h-[40px] items-center rounded-full bg-surface-container-high px-4 text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border border-transparent" data-nav-link data-i18n="nav.about" href="#about">Tentang</a>
+                <a class="nav-link inline-flex min-h-[40px] items-center rounded-full bg-surface-container-high px-4 text-on-surface-variant dark:text-on-surface-variant hover:text-primary font-label-lg text-label-lg transition-colors border border-transparent" data-nav-link data-i18n="nav.contact" href="#kontak">Kontak</a>
             </div>
             <div class="hidden md:flex md:absolute md:left-1/2 md:-translate-x-1/2 items-center gap-6 lg:gap-8">
                 <a class="nav-link text-primary font-bold border-b-2 border-secondary pb-1 font-label-lg text-label-lg transition-colors" data-nav-link data-i18n="nav.home" href="#home">Beranda</a>
